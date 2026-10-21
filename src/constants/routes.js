@@ -1,0 +1,18 @@
+export const ROUTES = {
+  HOME:            '/',
+  LOGIN:           '/login',
+  DASHBOARD:       '/dashboard',
+  MAP:             '/map',
+  SENSORS:         '/sensors',
+  SENSOR_DETAIL:   '/sensors/:nodeId',
+  ALERTS:          '/alerts',
+  PREDICTION:      '/prediction',
+  PURIFICATION:    '/purification',
+  DRONE:           '/drone',
+  RESCUE:          '/rescue',
+  REPORTS:         '/reports',
+  SETTINGS:        '/settings',
+  SETTINGS_NODES:  '/settings/nodes',
+  SETTINGS_ALERTS: '/settings/alerts',
+  SETTINGS_USERS:  '/settings/users',
+};

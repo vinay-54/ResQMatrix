@@ -46,7 +46,6 @@ const sensorReadingSchema = new mongoose.Schema({
   receivedAt: {
     type:    Date,
     default: Date.now,
-    index:   true,
   },
 
 }, {

@@ -1,15 +1,12 @@
 const router = require('express').Router();
-const { sosLimiter } = require('../middleware/rateLimiter');
+const ctrl   = require('../controllers/sosController');
+const { verifyJWT }       = require('../middleware/auth');
+const { adminOrOperator, citizenOrAbove } = require('../middleware/rbac');
+const { sosLimiter }      = require('../middleware/rateLimiter');
 
-// Rate limit SOS endpoints
-router.use(sosLimiter);
-
-router.post('/', (req, res) => {
-  res.json({ success: true, message: 'SOS submission — not yet implemented' });
-});
-
-router.get('/', (req, res) => {
-  res.json({ success: true, message: 'SOS list — not yet implemented' });
-});
+router.post  ('/',                     sosLimiter, verifyJWT, citizenOrAbove,  ctrl.create);
+router.get   ('/',                                verifyJWT, citizenOrAbove,  ctrl.getAll);
+router.get   ('/:incidentRef',                    verifyJWT, citizenOrAbove,  ctrl.getOne);
+router.patch ('/:incidentRef/status',             verifyJWT, adminOrOperator, ctrl.updateStatus);
 
 module.exports = router;

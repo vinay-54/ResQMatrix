@@ -1,18 +1,17 @@
 const router = require('express').Router();
+const ctrl   = require('../controllers/sensorController');
+const { verifyJWT }       = require('../middleware/auth');
+const { adminOrOperator, staffOnly } = require('../middleware/rbac');
 
-// GET /api/sensors
-router.get('/', (req, res) => {
-  res.json({ success: true, message: 'Sensors list — not yet implemented (Stage B5)' });
-});
+// Public read — citizens can read sensor data
+router.get('/stats/summary', verifyJWT,              ctrl.getSummary);
+router.get('/',              verifyJWT,              ctrl.getAll);
+router.get('/:nodeId',       verifyJWT,              ctrl.getOne);
+router.get('/:nodeId/readings', verifyJWT,           ctrl.getReadings);
 
-// GET /api/sensors/:id
-router.get('/:id', (req, res) => {
-  res.json({ success: true, message: `Sensor ${req.params.id} — not yet implemented` });
-});
-
-// POST /api/sensors/:id/data
-router.post('/:id/data', (req, res) => {
-  res.json({ success: true, message: 'Sensor data ingestion — not yet implemented' });
-});
+// Write — admin/coordinator/operator only
+router.post  ('/',        verifyJWT, adminOrOperator, ctrl.create);
+router.patch ('/:nodeId', verifyJWT, adminOrOperator, ctrl.update);
+router.delete('/:nodeId', verifyJWT, adminOrOperator, ctrl.remove);
 
 module.exports = router;

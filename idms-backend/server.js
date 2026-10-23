@@ -50,8 +50,13 @@ const start = async () => {
     try {
       initFirebase();
       logger.info('✅ Firebase Admin SDK initialized');
+
+      // 3. Seed Firebase RTDB with current MongoDB state
+      const { seedFromMongoDB } = require('./src/services/firebaseService');
+      await seedFromMongoDB();
+      logger.info('✅ Firebase RTDB seeded with current data');
     } catch (err) {
-      logger.warn('⚠️  Firebase init failed (expected with placeholder creds)', {
+      logger.warn('⚠️  Firebase init/seed failed (expected with placeholder creds)', {
         error: err.message,
       });
     }

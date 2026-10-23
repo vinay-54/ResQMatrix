@@ -1,6 +1,7 @@
 const { SOSIncident, Alert } = require('../models');
 const { success, created, error, notFound, badRequest } = require('../utils/apiResponse');
 const logger = require('../utils/logger');
+const { writeSOS, updateSOSStatus: fbUpdateSOSStatus } = require('../services/firebaseService');
 
 // ── POST /api/sos ───────────────────────────────────────────────────────
 exports.create = async (req, res) => {
@@ -53,6 +54,14 @@ exports.create = async (req, res) => {
       });
       io.to('user-room').emit('sos:status', { incidentRef, status: 'RECEIVED' });
     }, 3000);
+
+    // Write to Firebase RTDB for instant frontend visibility
+    await writeSOS(incidentRef, {
+      lat: incident.location.lat,
+      lng: incident.location.lng,
+      status: 'CREATED',
+      reporterName: incident.reporterName,
+    });
 
     logger.info('SOS incident created', { incidentRef, lat, lng, by: req.user?.uid });
     return created(res, { incident, alert, incidentRef }, 'SOS received — rescue teams notified');
@@ -132,6 +141,9 @@ exports.updateStatus = async (req, res) => {
       status:      incident.status,
       team:        incident.assignedTeam?.name,
     });
+
+    // Sync to Firebase RTDB — removes from active list if resolved/cancelled
+    await fbUpdateSOSStatus(incident.incidentRef, status);
 
     logger.info('SOS status updated', { incidentRef: incident.incidentRef, status, by: req.user.uid });
     return success(res, incident, `SOS status updated to ${status}`);

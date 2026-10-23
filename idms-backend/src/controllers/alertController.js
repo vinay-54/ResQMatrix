@@ -1,6 +1,17 @@
 const { Alert } = require('../models');
 const { success, created, error, notFound, badRequest } = require('../utils/apiResponse');
 const logger = require('../utils/logger');
+const { updateAlertCount } = require('../services/firebaseService');
+
+// Helper — sync unacknowledged count to Firebase after any alert state change
+const syncAlertCount = async () => {
+  try {
+    const count = await Alert.countDocuments({ acknowledged: false });
+    await updateAlertCount(count);
+  } catch (err) {
+    logger.warn('syncAlertCount to Firebase failed', { err: err.message });
+  }
+};
 
 // ── GET /api/alerts ─────────────────────────────────────────────────────
 exports.getAll = async (req, res) => {
@@ -82,6 +93,7 @@ exports.create = async (req, res) => {
       });
     }
 
+    await syncAlertCount();
     return created(res, alert, 'Alert created');
   } catch (err) {
     logger.error('create alert error', { err: err.message });
@@ -110,6 +122,7 @@ exports.acknowledge = async (req, res) => {
       acknowledgedAt: alert.acknowledgedAt,
     });
 
+    await syncAlertCount();
     return success(res, alert, 'Alert acknowledged');
   } catch (err) {
     logger.error('acknowledge alert error', { err: err.message });
@@ -132,6 +145,7 @@ exports.acknowledgeAll = async (req, res) => {
     const io = req.app.get('io');
     io.to('admin-room').emit('alert:all-acknowledged', { count: result.modifiedCount });
 
+    await syncAlertCount();
     return success(res, { modified: result.modifiedCount }, 'All alerts acknowledged');
   } catch (err) {
     logger.error('acknowledgeAll error', { err: err.message });

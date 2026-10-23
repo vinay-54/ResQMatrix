@@ -40,7 +40,7 @@ app.use('/api/', apiLimiter);
 app.get('/health', (req, res) => {
   res.json({
     status:    'healthy',
-    service:   'IDMS Backend',
+    service:   'ResQMatrix Backend',
     version:   '1.0.0',
     timestamp: new Date().toISOString(),
     env:       env.NODE_ENV,

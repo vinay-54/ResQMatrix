@@ -33,7 +33,7 @@ const FeatureItem = ({ icon: Icon, title, description, isLast }) => (
       }`}
   >
     <div className="w-8 h-8 rounded-md bg-white/[0.08] flex items-center justify-center flex-shrink-0">
-      <Icon size={16} className="text-[#60A5FA]" />
+      <Icon size={16} className="text-[#4868fc]" />
     </div>
     <div>
       <p className="text-white/90 text-sm font-medium">{title}</p>
@@ -115,7 +115,7 @@ const Login = () => {
         {/* Top — Logo + Tagline */}
         <div>
           <div className="flex items-center gap-2.5">
-            <img src="/logo.svg" alt="ResQMatrix" className="h-[30px] w-auto brightness-0 invert" />
+            <img src="/logo.svg" alt="ResQMatrix" className="h-[50px] w-auto brightness-0 invert" />
           </div>
 
           <h1 className="mt-12 text-white/90 text-[22px] font-semibold leading-tight tracking-tight">
@@ -155,7 +155,7 @@ const Login = () => {
             <PillSeparator />
             <StatusPill color="bg-[#34D399]" label="5 Nodes Active" />
             <PillSeparator />
-            <StatusPill color="bg-[#60A5FA]" label="v1.0.0" />
+            <StatusPill color="bg-[#4868fc]" label="v1.0.0" />
           </div>
           <p className="mt-4 text-white/25 text-xs">
             ResQMatrix · Disaster Management

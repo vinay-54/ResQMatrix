@@ -76,6 +76,15 @@ const start = async () => {
       logger.info(`✅ Server running on port ${env.PORT}`);
       logger.info(`📡 Environment: ${env.NODE_ENV}`);
       logger.info(`🏥 Health: http://localhost:${env.PORT}/health`);
+
+      // Start offline node detector
+      const { startOfflineDetector } = require('./src/jobs/offlineDetector');
+      startOfflineDetector(io);
+      logger.info('✅ Offline detector started');
+
+      // Update MQTT connected status in Firebase
+      const { updateSystemStatus } = require('./src/services/firebaseService');
+      updateSystemStatus({ mqttConnected: true }).catch(() => {});
     });
   } catch (err) {
     logger.error('❌ Startup failed', { error: err.message });

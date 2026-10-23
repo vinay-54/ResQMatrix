@@ -7,10 +7,11 @@ let client = null;
 // Topics the backend subscribes to
 const TOPICS = {
   SENSOR_DATA:     'idms/sensors/+/data',       // + = node ID wildcard
+  SENSOR_STATUS:   'idms/sensors/+/status',
   SOS_ALERT:       'idms/sos/+/alert',
   FWPU_DATA:       'idms/fwpu/+/data',
   DRONE_TELEMETRY: 'idms/drones/+/telemetry',
-  SENSOR_STATUS:   'idms/sensors/+/status',
+  DRONE_STATUS:    'idms/drones/+/status',
 };
 
 const connectMQTT = (app) => new Promise((resolve, reject) => {

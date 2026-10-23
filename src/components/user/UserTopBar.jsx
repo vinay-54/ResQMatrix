@@ -52,7 +52,7 @@ const UserTopBar = () => {
       <div className="flex items-center justify-between h-[52px]">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="ResQMatrix" className="h-[20px] w-auto flex-shrink-0" />
+          <img src="/logo.svg" alt="ResQMatrix" className="h-[20px] w-auto flex-shrink-0" />
           <div>
             <p className="text-[9px] text-[#94A3B8] leading-none">
               {t('topbar.hi', { name: user?.name?.split(' ')[0] || 'User' })}

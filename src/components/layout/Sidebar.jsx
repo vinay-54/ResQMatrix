@@ -41,7 +41,7 @@ const Sidebar = () => {
 
       {/* ── Section 1 — Logo Bar ── */}
       <div className="h-[52px] flex items-center px-4 border-b border-[#E2E8F0] flex-shrink-0">
-        <img src="/logo.png" alt="ResQMatrix" className="h-[22px] w-auto flex-shrink-0" />
+        <img src="/logo.svg" alt="ResQMatrix" className="h-[22px] w-auto flex-shrink-0" />
         <span className="ml-auto text-[10px] font-medium text-[#94A3B8] bg-[#F1F5F9] px-1.5 py-0.5 rounded">
           v1.0
         </span>

@@ -115,7 +115,7 @@ const Login = () => {
         {/* Top — Logo + Tagline */}
         <div>
           <div className="flex items-center gap-2.5">
-            <img src="/logo.png" alt="ResQMatrix" className="h-[30px] w-auto brightness-0 invert" />
+            <img src="/logo.svg" alt="ResQMatrix" className="h-[30px] w-auto brightness-0 invert" />
           </div>
 
           <h1 className="mt-12 text-white/90 text-[22px] font-semibold leading-tight tracking-tight">

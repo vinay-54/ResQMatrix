@@ -574,7 +574,7 @@ const ReportsPage = () => {
               Showing {filteredLog.length} of {derivedEventLog.length} events
             </span>
             <span>
-              IDMS v1.0 · SVCE Tirupati · Team Mind Mashers
+              ResQMatrix v1.0 · SVCE Tirupati · Team Mind Mashers
             </span>
           </div>
         </div>

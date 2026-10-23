@@ -115,10 +115,7 @@ const Login = () => {
         {/* Top — Logo + Tagline */}
         <div>
           <div className="flex items-center gap-2.5">
-            <ShieldCheck size={28} className="text-[#2563EB]" />
-            <span className="text-white text-xl font-semibold tracking-tight">
-              IDMS
-            </span>
+            <img src="/logo.png" alt="ResQMatrix" className="h-[30px] w-auto brightness-0 invert" />
           </div>
 
           <h1 className="mt-12 text-white/90 text-[22px] font-semibold leading-tight tracking-tight">
@@ -161,7 +158,7 @@ const Login = () => {
             <StatusPill color="bg-[#60A5FA]" label="v1.0.0" />
           </div>
           <p className="mt-4 text-white/25 text-xs">
-            IDMS Platform · Disaster Management
+            ResQMatrix · Disaster Management
           </p>
         </div>
       </div>
@@ -177,7 +174,7 @@ const Login = () => {
             Welcome back
           </h2>
           <p className="mt-1 text-sm text-[#64748B]">
-            Sign in to your IDMS account
+            Sign in to your ResQMatrix account
           </p>
 
           {/* Form */}
@@ -389,7 +386,7 @@ const Login = () => {
               Restricted access. Authorised personnel only.
             </p>
             <p className="text-xs text-[#CBD5E1] mt-1">
-              IDMS v1.0 · Disaster Management Platform
+              ResQMatrix v1.0 · Disaster Management Platform
             </p>
           </div>
         </motion.div>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#2563EB"/>
-  <path d="M16 6L20 14H12L16 6Z" fill="white" opacity="0.9"/>
-  <circle cx="16" cy="20" r="5" fill="white"/>
-  <circle cx="16" cy="20" r="2.5" fill="#2563EB"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- ResQMatrix logo mark — two diagonal bars + dot -->
+  <rect x="3" y="14" width="6" height="18" rx="3" fill="#4B7BF5" transform="rotate(-30 6 23)"/>
+  <rect x="10" y="14" width="6" height="18" rx="3" fill="#4B7BF5" transform="rotate(-30 13 23)"/>
+  <circle cx="22" cy="11" r="3" fill="#4B7BF5"/>
 </svg>

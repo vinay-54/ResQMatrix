@@ -12,7 +12,7 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    console.error('[IDMS Error Boundary]', error, info);
+    console.error('[ResQMatrix Error Boundary]', error, info);
   }
 
   render() {

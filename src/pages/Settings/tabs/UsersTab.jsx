@@ -210,7 +210,7 @@ const UsersTab = () => {
       {modal && <UserModal user={modal.user} isEdit={modal.mode === 'edit'}
         onClose={() => setModal(null)} onSave={handleSave} />}
       <ConfirmDialog open={!!deleteId} title="Remove User?"
-        message={`Remove "${users.find(u => u.id === deleteId)?.name}"? They will lose all access to IDMS.`}
+        message={`Remove "${users.find(u => u.id === deleteId)?.name}"? They will lose all access to ResQMatrix.`}
         confirmLabel="Remove User" onConfirm={handleDelete} onCancel={() => setDeleteId(null)} />
     </div>
   );

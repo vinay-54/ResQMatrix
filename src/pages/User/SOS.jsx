@@ -188,7 +188,7 @@ const UserSOS = () => {
       nodeName: user?.name || 'Citizen',
       level:    'DANGER',
       message:  `SOS Alert from ${user?.name || 'Citizen'} — ${locText}`,
-      detail:   `Emergency SOS pressed by citizen via IDMS User Portal. ${locText}. Rescue required immediately.`,
+      detail:   `Emergency SOS pressed by citizen via ResQMatrix User Portal. ${locText}. Rescue required immediately.`,
       timestamp: now,
       channels:  ['FCM', 'SMS'],
       isSOS:     true,
@@ -197,7 +197,7 @@ const UserSOS = () => {
 
     addActivity({
       team:     null,
-      teamName: 'IDMS System',
+      teamName: 'ResQMatrix System',
       type:     'alert',
       message:  `SOS received from ${user?.name || 'Citizen'} — ${locText}`,
       level:    'warning',

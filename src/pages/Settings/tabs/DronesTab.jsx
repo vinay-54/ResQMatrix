@@ -42,7 +42,7 @@ const DroneModal = ({ drone, isEdit, onClose, onSave }) => {
             <div className="grid grid-cols-2 gap-3">
               <FormField label="Drone ID" required error={errors.id}>
                 <input value={form.id} onChange={e => update('id', e.target.value)}
-                  placeholder="IDMS-UAV-02" className={inputClass} disabled={isEdit} />
+                  placeholder="RQM-UAV-02" className={inputClass} disabled={isEdit} />
               </FormField>
               <FormField label="Model" required error={errors.model}>
                 <input value={form.model} onChange={e => update('model', e.target.value)}

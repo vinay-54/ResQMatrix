@@ -117,7 +117,7 @@ const GeneralTab = () => {
       <SectionCard title="System Information" description="Current system version and build details">
         <div className="space-y-2.5">
           {[
-            { label: 'Application',  value: 'IDMS — Integrated Disaster Management System' },
+            { label: 'Application',  value: 'ResQMatrix — Integrated Disaster Management System' },
             { label: 'Version',      value: 'v1.0.0' },
             { label: 'Team',         value: 'Mind Mashers — SVCE Tirupati' },
             { label: 'Reference',    value: 'IDEAAP031106' },

@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Home",
     "alerts": "Alerts",
@@ -9,7 +9,7 @@
   },
   "topbar": {
     "hi": "Hi, {{name}}",
-    "idms": "IDMS",
+    "idms": "ResQMatrix",
     "signOut": "Sign out",
     "statusLabels": {
       "SAFE": "Area is Safe",
@@ -67,7 +67,7 @@
     "status": {
       "SAFE": {
         "headline": "Your Area is Safe",
-        "subtext": "No flood risk at this time. Stay alert and follow IDMS updates."
+        "subtext": "No flood risk at this time. Stay alert and follow ResQMatrix updates."
       },
       "WATCH": {
         "headline": "Flood Watch — Stay Alert",
@@ -140,7 +140,7 @@
     "rescueTeamsActive": "{{count}} Rescue Team Active",
     "rescueTeamsActivePlural": "{{count}} Rescue Teams Active",
     "teamsDeployed": "Teams are deployed in your area",
-    "footer1": "IDMS v1.0 · Team Mind Mashers · SVCE Tirupati",
+    "footer1": "ResQMatrix v1.0 · Team Mind Mashers · SVCE Tirupati",
     "footer2": "Data refreshes every 30 seconds · Powered by solar IoT network"
   },
   "alerts": {
@@ -219,14 +219,14 @@
         "Stay away from rivers, drains, and low-lying areas"
       ],
       "WATCH": [
-        "Stay informed — check IDMS updates regularly",
+        "Stay informed — check ResQMatrix updates regularly",
         "Make sure your phone is fully charged",
         "Know your evacuation route in advance",
         "Keep emergency numbers saved on your phone"
       ],
       "SAFE": [
         "Stay alert — conditions can change quickly",
-        "Keep IDMS notifications enabled on your phone",
+        "Keep ResQMatrix notifications enabled on your phone",
         "Know where your nearest rescue camp is"
       ]
     },
@@ -235,7 +235,7 @@
     "emergencyTip2": "Call 112 for national emergency services",
     "emergencyTip3": "Go to the nearest rescue camp if safe",
     "emergencyTip4": "Never walk through floodwater",
-    "footer": "Alerts from IDMS sensor network · Updates every 30 seconds"
+    "footer": "Alerts from ResQMatrix sensor network · Updates every 30 seconds"
   },
   "map": {
     "safetyMap": "Safety Map",
@@ -351,7 +351,7 @@
       "apDisasterAuthority": "AP Disaster Authority",
       "apDisasterAuthoritySub": "Andhra Pradesh SDMA control room",
       "svceCommandPost": "SVCE Command Post",
-      "svceCommandPostSub": "IDMS project coordination — Vinay Kumar"
+      "svceCommandPostSub": "ResQMatrix project coordination — Vinay Kumar"
     },
     "evacuation": {
       "step1Title": "Do not panic — act quickly and calmly",
@@ -398,7 +398,7 @@
       "step6Title": "Go to the nearest rescue camp",
       "step6Detail": "Rescue camps have food, water, medicine, and shelter. They are the safest place during a flood.",
       "step6Tips": [
-        "Check the IDMS Safety Map (Map tab) for the nearest camp",
+        "Check the ResQMatrix Safety Map (Map tab) for the nearest camp",
         "Walk along the highest available route",
         "Stay with your family — do not separate",
         "Carry your ID — you may need to register at the camp"
@@ -406,7 +406,7 @@
       "step7Title": "If trapped — signal for help",
       "step7Detail": "If you cannot move, make yourself visible and audible to rescuers.",
       "step7Tips": [
-        "Press SOS in the IDMS app — rescue teams get your GPS location",
+        "Press SOS in the ResQMatrix app — rescue teams get your GPS location",
         "Wave a brightly coloured cloth from a window or rooftop",
         "Shout or make noise when you hear rescuers nearby",
         "Stay above water level — do not go to ground floor",
@@ -506,7 +506,7 @@
     "storageTip4Title": "Keep away from children",
     "storageTip4Sub": "Store water containers out of reach to prevent spillage",
     "emergencyAltTitle": "If No Water Points Are Available",
-    "emergencyAltSub": "If IDMS water points are offline, follow these steps to make water safer:",
+    "emergencyAltSub": "If ResQMatrix water points are offline, follow these steps to make water safer:",
     "boilingMethod": "Boiling Method (Most Reliable)",
     "boilStep1": "Filter water through a clean cloth to remove solids",
     "boilStep2": "Boil at full rolling boil for at least 1 minute",
@@ -515,8 +515,8 @@
     "altTip1": "Water purification tablets — 1 tablet per 1L, wait 30 minutes",
     "altTip2": "Sealed bottled water from shops — check seal before buying",
     "altTip3": "Call rescue teams — they carry emergency water supply",
-    "aboutTitle": "About the IDMS Water Purification System",
-    "aboutDesc": "IDMS uses solar-powered floating water purification units (FWPU-X) that convert flood water into safe drinking water using a 5-stage process — sediment filtration, carbon filtration, reverse osmosis membrane, and UV sterilization. No mains power required.",
+    "aboutTitle": "About the ResQMatrix Water Purification System",
+    "aboutDesc": "ResQMatrix uses solar-powered floating water purification units (FWPU-X) that convert flood water into safe drinking water using a 5-stage process — sediment filtration, carbon filtration, reverse osmosis membrane, and UV sterilization. No mains power required.",
     "removes": "Removes",
     "removesValue": "99.9% bacteria, viruses, impurities",
     "poweredByLabel": "Powered by",
@@ -526,13 +526,13 @@
     "qualityLabel": "Quality",
     "qualityValue": "WHO drinking water standard",
     "safetyTitle": "Water Safety During Floods",
-    "safetyTip1": "Only drink water from IDMS water points or sealed bottles",
+    "safetyTip1": "Only drink water from ResQMatrix water points or sealed bottles",
     "safetyTip2": "Never drink floodwater — it contains bacteria and chemicals",
-    "safetyTip3": "Boil water if IDMS points are unavailable",
+    "safetyTip3": "Boil water if ResQMatrix points are unavailable",
     "safetyTip4": "Use purified water for cooking and baby formula",
     "safetyTip5": "Store collected water in clean, covered containers",
     "emergencyCall": "Emergency — Call 112",
-    "footer": "Water quality monitored in real-time by IDMS sensor network"
+    "footer": "Water quality monitored in real-time by ResQMatrix sensor network"
   },
   "profile": {
     "title": "My Profile",

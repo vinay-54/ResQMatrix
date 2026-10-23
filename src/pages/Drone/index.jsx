@@ -185,12 +185,12 @@ const TelemetryCard = ({ drone, telemetry }) => {
         )}
       </div>
 
-      {/* IDMS Integration note */}
+      {/* ResQMatrix Integration note */}
       <div className="px-5 py-2.5 border-t border-[#F8FAFC] bg-[#F8FAFC]">
         <p className="text-[10px] text-[#94A3B8]">
           <span className="font-semibold text-[#475569]">Live video:</span>{' '}
           Available on pilot's controller monitor (5.8GHz FPV direct link) ·
-          Not streamed through IDMS in this version
+          Not streamed through ResQMatrix in this version
         </p>
       </div>
     </div>
@@ -503,10 +503,10 @@ const DroneSpecsCard = ({ drone }) => (
 
       {/* Important integration note */}
       <div className="mt-3 px-3 py-2.5 bg-[#EFF6FF] border border-[#BFDBFE] rounded-lg">
-        <p className="text-[10px] font-semibold text-[#2563EB] mb-1">IDMS Integration</p>
+        <p className="text-[10px] font-semibold text-[#2563EB] mb-1">ResQMatrix Integration</p>
         <p className="text-[10px] text-[#1D4ED8] leading-relaxed">
           Telemetry via MQTT (GPS, battery, flight mode, status).
-          Live video on pilot's controller — not integrated into IDMS portal in v1.
+          Live video on pilot's controller — not integrated into ResQMatrix portal in v1.
         </p>
       </div>
     </div>

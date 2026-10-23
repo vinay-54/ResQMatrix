@@ -299,7 +299,7 @@ const SensorsPage = () => {
           Showing {filtered.length} of {nodes.length} nodes
         </span>
         <span>
-          {activeArea?.name || 'IDMS'} · {nodes.length} nodes · Solar powered
+          {activeArea?.name || 'ResQMatrix'} · {nodes.length} nodes · Solar powered
         </span>
       </div>
     </motion.div>

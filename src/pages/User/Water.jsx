@@ -395,7 +395,7 @@ const EmergencyWaterGuide = () => (
     </div>
 
     <p className="text-[12px] text-[#92400E] mb-3 leading-relaxed">
-      If IDMS water points are offline, follow these steps to make water safer:
+      If ResQMatrix water points are offline, follow these steps to make water safer:
     </p>
 
     {/* Boiling guide */}
@@ -582,10 +582,10 @@ const UserWater = () => {
       {/* ── FWPU-X System Info ───────────────────────────── */}
       <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-4">
         <p className="text-[12px] font-bold text-[#0F172A] mb-2">
-          About the IDMS Water Purification System
+          About the ResQMatrix Water Purification System
         </p>
         <p className="text-[11px] text-[#64748B] leading-relaxed mb-3">
-          IDMS uses solar-powered floating water purification units (FWPU-X) that
+          ResQMatrix uses solar-powered floating water purification units (FWPU-X) that
           convert flood water into safe drinking water using a 5-stage process —
           sediment filtration, carbon filtration, reverse osmosis membrane,
           and UV sterilization. No mains power required.
@@ -613,9 +613,9 @@ const UserWater = () => {
         </div>
         <div className="space-y-2.5">
           {[
-            { text: 'Only drink water from IDMS water points or sealed bottles', color: '#059669' },
+            { text: 'Only drink water from ResQMatrix water points or sealed bottles', color: '#059669' },
             { text: 'Never drink floodwater — it contains bacteria and chemicals', color: '#DC2626' },
-            { text: 'Boil water if IDMS points are unavailable', color: '#D97706' },
+            { text: 'Boil water if ResQMatrix points are unavailable', color: '#D97706' },
             { text: 'Use purified water for cooking and baby formula', color: '#2563EB' },
             { text: 'Store collected water in clean, covered containers', color: '#0F172A' },
           ].map((tip, idx) => (
@@ -642,7 +642,7 @@ const UserWater = () => {
 
       {/* Footer */}
       <p className="text-center text-[10px] text-[#CBD5E1]">
-        Water quality monitored in real-time by IDMS sensor network
+        Water quality monitored in real-time by ResQMatrix sensor network
       </p>
 
     </motion.div>

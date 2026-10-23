@@ -23,7 +23,7 @@ const Header = ({ onMenuToggle }) => {
     .find((key) => location.pathname === key || location.pathname.startsWith(key + '/'));
 
   const meta = PAGE_META[matchKey] || {
-    title: 'IDMS',
+    title: 'ResQMatrix',
     subtitle: 'Integrated Disaster Management',
   };
 

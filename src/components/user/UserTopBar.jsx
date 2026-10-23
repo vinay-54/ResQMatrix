@@ -52,9 +52,8 @@ const UserTopBar = () => {
       <div className="flex items-center justify-between h-[52px]">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <ShieldCheck size={20} className="text-[#2563EB]" />
+          <img src="/logo.png" alt="ResQMatrix" className="h-[20px] w-auto flex-shrink-0" />
           <div>
-            <p className="text-[14px] font-bold text-[#0F172A] leading-none">{t('topbar.idms')}</p>
             <p className="text-[9px] text-[#94A3B8] leading-none">
               {t('topbar.hi', { name: user?.name?.split(' ')[0] || 'User' })}
             </p>

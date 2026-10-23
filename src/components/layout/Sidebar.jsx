@@ -41,10 +41,7 @@ const Sidebar = () => {
 
       {/* ── Section 1 — Logo Bar ── */}
       <div className="h-[52px] flex items-center px-4 border-b border-[#E2E8F0] flex-shrink-0">
-        <ShieldCheck size={18} className="text-[#2563EB] flex-shrink-0" />
-        <span className="ml-2 text-[15px] font-semibold text-[#0F172A] tracking-tight">
-          IDMS
-        </span>
+        <img src="/logo.png" alt="ResQMatrix" className="h-[22px] w-auto flex-shrink-0" />
         <span className="ml-auto text-[10px] font-medium text-[#94A3B8] bg-[#F1F5F9] px-1.5 py-0.5 rounded">
           v1.0
         </span>

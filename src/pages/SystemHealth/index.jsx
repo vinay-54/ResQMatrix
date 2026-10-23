@@ -128,7 +128,7 @@ const SystemHealth = () => {
         {
           icon:       Server,
           iconColor:  '#0F172A',
-          label:      'IDMS Backend API (Node.js)',
+          label:      'ResQMatrix Backend API (Node.js)',
           status:     'online',   // Will be real in B8
           detail:     'http://localhost:5000 · v1.0.0',
         },
@@ -172,7 +172,7 @@ const SystemHealth = () => {
             System Health
           </h1>
           <p className="text-[13px] text-[#64748B] mt-0.5">
-            Real-time status of all IDMS components
+            Real-time status of all ResQMatrix components
           </p>
         </div>
         <button

@@ -174,20 +174,20 @@ const UserStatus = () => {
         nodeName: user?.name || 'Citizen',
         level:    'DANGER',
         message:  `Emergency — ${user?.name || 'Citizen'} needs immediate rescue`,
-        detail:   'Emergency status set via IDMS User Portal status check-in.',
+        detail:   'Emergency status set via ResQMatrix User Portal status check-in.',
         timestamp: Date.now(),
         channels:  ['FCM', 'SMS'],
         isSOS:     true,
       });
       addActivity({
-        teamName: 'IDMS System',
+        teamName: 'ResQMatrix System',
         type:     'alert',
         message:  `EMERGENCY: ${user?.name || 'Citizen'} needs immediate rescue — Status page`,
         level:    'warning',
       });
     } else {
       addActivity({
-        teamName: 'IDMS System',
+        teamName: 'ResQMatrix System',
         type:     'status',
         message:  `${user?.name || 'Citizen'} marked status: ${statusValue.toUpperCase()}`,
         level:    'info',

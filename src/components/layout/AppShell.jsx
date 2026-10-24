@@ -7,6 +7,7 @@ import Header from './Header';
 import OfflineBanner from './OfflineBanner';
 import PageTransition from './PageTransition';
 import { useSocket } from '../../hooks/useSocket';
+import { usePushNotifications } from '../../hooks/usePushNotifications.jsx';
 
 const AppShell = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -15,6 +16,9 @@ const AppShell = ({ children }) => {
 
   // Connect Socket.io for real-time events across all admin pages
   useSocket('admin-room');
+
+  // Connect push notifications for admin — background SOS alerts
+  usePushNotifications();
 
   // Close mobile drawer on route change
   useEffect(() => {

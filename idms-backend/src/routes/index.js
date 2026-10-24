@@ -10,5 +10,6 @@ router.use('/camps',        require('./camps'));
 router.use('/sos',          require('./sos'));
 router.use('/purification', require('./purification'));
 router.use('/prediction',   require('./prediction'));
+router.use('/notifications', require('./notifications'));
 
 module.exports = router;

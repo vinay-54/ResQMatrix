@@ -21,6 +21,9 @@ const schema = Joi.object({
   THRESHOLD_WARNING:     Joi.number().default(25),
   THRESHOLD_DANGER:      Joi.number().default(15),
   THRESHOLD_CRITICAL:    Joi.number().default(8),
+  MSG91_AUTH_KEY:         Joi.string().optional().allow('', null),
+  MSG91_TEMPLATE_ID:     Joi.string().optional().allow('', null),
+  MSG91_SENDER_ID:       Joi.string().default('RESQMX'),
 }).unknown(true);
 
 const { error, value } = schema.validate(process.env);

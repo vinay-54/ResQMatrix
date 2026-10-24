@@ -6,11 +6,15 @@ import Sidebar from './Sidebar';
 import Header from './Header';
 import OfflineBanner from './OfflineBanner';
 import PageTransition from './PageTransition';
+import { useSocket } from '../../hooks/useSocket';
 
 const AppShell = ({ children }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const motion_config = useMotion();
+
+  // Connect Socket.io for real-time events across all admin pages
+  useSocket('admin-room');
 
   // Close mobile drawer on route change
   useEffect(() => {

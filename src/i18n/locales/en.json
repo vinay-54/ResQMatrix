@@ -277,9 +277,24 @@
     "estTime": "Est. Time",
     "routeWarning": "Route not verified for flood conditions.",
     "routeWarningSub": "Roads may be flooded. Confirm safety before proceeding. If blocked, call 112 or press SOS.",
-    "callCamp": "Call Camp — {{contact}}",
+    "callCamp": "Call Camp",
     "showAllSafeZones": "Show all safe zones",
-    "open": "OPEN"
+    "open": "OPEN",
+    "safeZonesCount": "{{count}} safe zones nearby",
+    "capacity": "Capacity: {{count}} people",
+    "legendSafe": "Safe Zone / Camp",
+    "legendDanger": "Danger Area",
+    "legendYou": "Your Location",
+    "legendRoute": "Route to Safety",
+    "dangerLabel": {
+      "CRITICAL": "Extremely Dangerous — Do Not Enter",
+      "DANGER": "Dangerous Flood Zone",
+      "WARNING": "High Risk Area",
+      "WATCH": "Caution — Rising Water",
+      "default": "Caution Area"
+    },
+    "noCamps": "No rescue camps nearby",
+    "routeWarningBold": "Route not verified for flood conditions."
   },
   "status": {
     "title": "Safety Status",

@@ -380,6 +380,30 @@ const UserContacts = () => {
             transition={{ duration: 0.15 }}
             className="space-y-3"
           >
+            {/* Interactive Evacuation Guide link */}
+            <button
+              onClick={() => navigate('/user/evacuation')}
+              className="w-full flex items-center justify-between px-4 py-3.5
+                         bg-[#EFF6FF] border-2 border-[#BFDBFE] rounded-2xl mb-4
+                         active:scale-[0.97] transition-all"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[#2563EB] flex items-center
+                                justify-center flex-shrink-0">
+                  <Navigation size={18} className="text-white" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[13px] font-bold text-[#2563EB]">
+                    Interactive Evacuation Guide
+                  </p>
+                  <p className="text-[11px] text-[#1D4ED8] mt-0.5">
+                    Step-by-step guided flow with checklists
+                  </p>
+                </div>
+              </div>
+              <ChevronRight size={18} className="text-[#2563EB]" />
+            </button>
+
             {/* Header banner */}
             <div className="bg-[#FEF2F2] border-2 border-[#FECACA] rounded-2xl
                             px-4 py-3.5 flex items-start gap-3">

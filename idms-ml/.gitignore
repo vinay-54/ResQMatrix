@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+*.log
+
+# Model binaries — too large for git
+model/saved/*.keras
+model/saved/*.pkl
+model/saved/*.h5
+model/saved/*.joblib
+
+# Virtual environment
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

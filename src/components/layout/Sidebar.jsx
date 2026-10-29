@@ -5,7 +5,8 @@ import { useMotion } from '../../hooks/useMotion';
 import {
   LayoutDashboard, Map, Activity, Bell, TrendingUp,
   Droplets, Plane, Users, BarChart3, Settings2,
-  ShieldCheck, ChevronUp, Settings, HelpCircle, LogOut
+  ShieldCheck, ChevronUp, Settings, HelpCircle, LogOut,
+  FlaskConical
 } from 'lucide-react';
 import useAuthStore from '../../store/useAuthStore';
 import useDataStore from '../../store/useDataStore';
@@ -13,7 +14,7 @@ import { NAV_GROUPS } from '../../constants/navigation';
 
 const ICON_MAP = {
   LayoutDashboard, Map, Activity, Bell, TrendingUp,
-  Droplets, Plane, Users, BarChart3, Settings2,
+  Droplets, Plane, Users, BarChart3, Settings2, FlaskConical,
 };
 
 const Sidebar = () => {

@@ -82,6 +82,12 @@ export const NAV_GROUPS = [
         description: 'Component status',
       },
       {
+        label: 'Simulation',
+        path:  '/simulation',
+        icon:  'FlaskConical',
+        badge: null,
+      },
+      {
         label: 'Settings',
         path:  '/settings',
         icon:  'Settings2',
@@ -101,6 +107,7 @@ export const PAGE_META = {
   '/drone':        { title: 'Drone Operations',   subtitle: 'Aerial monitoring and mapping' },
   '/rescue':       { title: 'Rescue Portal',      subtitle: 'Team assignments and coordination' },
   '/reports':      { title: 'Reports',            subtitle: 'Data analytics and CSV exports' },
+  '/simulation':   { title: 'Simulation Mode',   subtitle: 'Pipeline simulation and sensor testing' },
   '/settings':      { title: 'Settings',           subtitle: 'System and node configuration' },
   '/system-health': { title: 'System Health',      subtitle: 'Component status and diagnostics' },
 };

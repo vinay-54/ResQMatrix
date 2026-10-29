@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: idms-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: THRESHOLD_SAFE
+        value: 80
+      - key: THRESHOLD_WATCH
+        value: 40
+      - key: THRESHOLD_WARNING
+        value: 25
+      - key: THRESHOLD_DANGER
+        value: 15
+      - key: THRESHOLD_CRITICAL
+        value: 8
+      # Secrets — set in Render dashboard, not here:
+      # FRONTEND_URL, MONGODB_URI, JWT_SECRET,
+      # FIREBASE_PROJECT_ID, FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL,
+      # FIREBASE_DATABASE_URL, MQTT_BROKER_URL, MQTT_USERNAME, MQTT_PASSWORD,
+      # ML_SERVICE_URL, MSG91_AUTH_KEY, MSG91_SENDER_ID, MSG91_TEMPLATE_ID

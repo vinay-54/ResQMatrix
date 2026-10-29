@@ -192,7 +192,7 @@ const useDataStore = create(
       })),
 
       updateNode: (id, updates) => set(s => ({
-        nodes: s.nodes.map(n => n.id === id ? { ...n, ...updates } : n),
+        nodes: s.nodes.map(n => (n.id === id || n.nodeId === id) ? { ...n, ...updates } : n),
       })),
 
       deleteNode: (id) => set(s => ({

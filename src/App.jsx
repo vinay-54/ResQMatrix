@@ -20,6 +20,7 @@ const Rescue       = lazy(() => import('./pages/Rescue'));
 const Reports      = lazy(() => import('./pages/Reports'));
 const Settings     = lazy(() => import('./pages/Settings'));
 const SystemHealth = lazy(() => import('./pages/SystemHealth'));
+const Simulation   = lazy(() => import('./pages/Simulation'));
 const Login        = lazy(() => import('./pages/Auth/Login'));
 
 // ── User Portal Pages ───────────────────────────────
@@ -105,6 +106,7 @@ export default function App() {
             <Route path="/reports"         element={<ProtectedRoute><Reports /></ProtectedRoute>} />
             <Route path="/settings/*"      element={<ProtectedRoute><Settings /></ProtectedRoute>} />
             <Route path="/system-health"  element={<ProtectedRoute><SystemHealth /></ProtectedRoute>} />
+            <Route path="/simulation"     element={<ProtectedRoute><Simulation /></ProtectedRoute>} />
 
             {/* ── User Portal Routes ──────────────────── */}
             <Route path="/user/dashboard"  element={<UserRoute><UserDashboard /></UserRoute>} />

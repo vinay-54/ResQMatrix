@@ -10,6 +10,10 @@ model/saved/*.pkl
 model/saved/*.h5
 model/saved/*.joblib
 
+# Generated datasets — too large for git (regenerate with data/download_datasets.py)
+data/raw/
+data/processed/
+
 # Virtual environment
 venv/
 .venv/
